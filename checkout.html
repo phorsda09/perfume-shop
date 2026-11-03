@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LDR-SHOP - Checkout</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">LDR-SHOP</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="products.html">Products</a>
+    <a href="cart.html" class="cart-link">
+  <i class="fas fa-shopping-cart"></i>
+  <span id="cart-count" class="cart-badge">0</span>
+</a>
+
+    </nav>
+  </header>
+
+  <!-- Checkout Section -->
+  <section class="checkout-form">
+    <h2>Order Checkout</h2>
+    <form id="orderForm" onsubmit="submitOrder(event)">
+      <label>Full Name</label>
+      <input type="text" id="name" required />
+
+      <label>Phone Number</label>
+      <input type="tel" id="phone" required pattern="[0-9]{8,15}" />
+
+      <label>Delivery Location</label>
+      <textarea id="location" rows="4" required></textarea>
+
+      <button type="submit">Place Order</button>
+    </form>
+    <div id="order-confirmation" style="display: none;">
+      <h3>Thank you! Your order has been placed.</h3>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LDR-SHOP - All Products</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+   <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">LDR-SHOP</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count" class="cart-badge">0</span>
+      </a>
+    </nav>
+    <div class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+<div class="filter-buttons">
+  <button onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('new')">New Arrival</button>
+  <button onclick="filterProducts('discount')">Discount (20%)</button>
+  <button onclick="filterProducts('best')">Best Selling</button>
+  <button onclick="filterProducts('man')">For Man</button>
+  <button onclick="filterProducts('woman')">For Women</button>
+</div>
+<div id="product-section" class="product-scroll-container">
+  <div class="product-discount" data-name="CHANCE CHANEL" data-price="80" data-img="image/Style Me Pretty Editors Signature Scents.jpg">
+      <div class="product-label discount">20% Off</div>
+    <img src="image/Style Me Pretty Editors Signature Scents.jpg" alt="CHANCE CHANEL">
+    <h3>CHANCE CHANEL</h3>
+    <p><del>$100</del> $80 <span class="discount"></span></p>
+    <button onclick="addToCart('CHANCE CHANEL', 80, 'image/CHANCE CHANEL.jpg')">
+     <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=CHANCE CHANEL&price=80&image=image/CHANCE CHANEL.jpg">View Detail</a>
+  </div>
+  <div class="product-discount" data-name="Bleu De CHANEL" data-price="120" data-img="image/Eau De Parfum Spray Bleu De CHANEL 50ml.jpg">
+    <div class="product-label discount">20% Off</div>
+    <img src="image/Eau De Parfum Spray Bleu De CHANEL 50ml.jpg" alt="Discount Perfume 2">
+    <h3>Bleu De CHANEL</h3>
+    <p><del>$150</del> $120 <span class="discount"></span></p>
+    <button onclick="addToCart('Bleu De CHANEL', 120, 'image/BLUE DE.jpg')"> 
+    <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Bleu De CHANEL&price=120&image=image/BLUE DE.jpg">View Detail</a>
+  </div>
+  <div class="product-discount" data-name="Marc Jacobs Daisy" data-price="95" data-img="image/DAISY.jpg">
+    <div class="product-label discount">20% Off</div>
+    <img src="image/DAISY.jpg" alt="Marc Jacobs Daisy">
+    <h3>Marc Jacobs Daisy</h3>
+    <p><del>$119</del> $95 <span class="discount"></span></p>
+    <button onclick="addToCart('Marc Jacobs Daisy', 95, 'image/DAISY.jpg')">
+   <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Marc Jacobs Daisy&price=95&image=image/Daisy Marc Jacobs.jpg">View Detail</a>
+  </div>
+  <div class="product-new" data-name="Dior Poison Girl" data-price="110" data-img="image/Perfume Dior Poison Girl Eau De Parfum 100ml Para Mulheres.jpg">
+     <div class="product-label new">New Arrival</div>
+    <img src="image/Perfume Dior Poison Girl Eau De Parfum 100ml Para Mulheres.jpg" alt="Dior Poison Girl">
+    <h3>Dior Poison Girl</h3>
+    <p>$110</p>
+    <button onclick="addToCart('Dior Poison Girl', 110, 'image/Perfume Dior Poison Girl Eau De Parfum 100ml Para Mulheres.jpg')">
+    <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Dior Poison Girl&price=110&image=image/poison girl dior.jpg">View Detail</a>
+  </div>
+  <div class="product-new" data-name="GUCCI Bloom" data-price="125" data-img="image/GUCCI Bloom.jpg">
+   <div class="product-label new">New Arrival</div>
+   <img src="image/GUCCI Bloom.jpg" alt="GUCCI Bloom">
+    <h3>GUCCI Bloom</h3>
+    <p>$125</p>
+    <button onclick="addToCart('GUCCI Bloom', 125, 'image/GUCCI Bloom.jpg')">
+     <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=GUCCI Bloom&price=125&image=image/Bloom.jpg">View Detail</a>
+  </div>
+  <div class="product-new" data-name="Black Opium" data-price="130" data-img="image/Black Opium.jpg">
+     <div class="product-label new">New Arrival</div>
+    <img src="image/Black Opium.jpg" alt="Black Opium">
+    <h3>Black Opium</h3>
+    <p>$130</p>
+    <button onclick="addToCart('Black Opium', 130, 'image/Black Opium.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Black Opium&price=130&image=image/Black Opium YSL.jpg">View Detail</a>
+  </div>
+
+  <!-- Best Selling -->
+  <div class="product-best" data-name="MISS DIOR" data-price="140" data-img="image/MISS DIOR.jpg">
+    <div class="product-label best">Best Selling</div>
+    <img src="image/MISS DIOR.jpg" alt="MISS DIOR">
+    <h3>MISS DIOR</h3>
+    <p>$140</p>
+    <button onclick="addToCart('MISS DIOR', 140, 'image/MISS DIOR.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=MISS DIOR&price=140&image=image/Miss Dior Blooming Bouquet perfume.jpg">View Detail</a>
+  </div>
+  <div class="product-best" data-name="Dior Sauvage" data-price="135" data-img="image/ok.jpg">
+    <div class="product-label best">Best Selling</div>
+    <img src="image/ok.jpg" alt="Dior Sauvage">
+    <h3>Dior Sauvage</h3>
+    <p>$135</p>
+    <button onclick="addToCart('Dior Sauvage', 135, 'image/ok.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Dior Sauvage&price=135&image=image/Dior Sauvage.jpg">View Detail</a>
+  </div>
+   <div class="product-best" data-name="Burberry Her" data-price="110" data-img="image/buberry her.jpg">
+    <div class="product-label best">Best Selling</div>
+    <img src="image/buberry her.jpg" alt="Burberry Her">
+    <h3>Burberry Her</h3>
+    <p>$110</p>
+    <button onclick="addToCart('Burberry Her', 110, 'image/buberry her.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Burberry Her&price=110&image=image/buberry her.jpg">View Detail</a>
+  </div>
+  <div class="product-best" data-name="Glossier You" data-price="145" data-img="image/Glossier You.jpg">
+    <div class="product-label best">Best Selling</div>
+    <img src="image/Glossier You.jpg" alt="Glossier You">
+    <h3>Glossier You</h3>
+    <p>$145</p>
+    <button onclick="addToCart('Glossier You', 145, 'image/You Glossier.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Glossier You&price=145&image=image/You Glossier.jpg">View Detail</a>
+  </div>
+
+  <!-- For Man -->
+  <div class="product-man" data-name="Valentino" data-price="120" data-img="image/Cologne for Men _ Nordstrom.jpg">
+    <img src="image/Cologne for Men _ Nordstrom.jpg" alt="Valentino">
+    <h3>Valentino</h3>
+    <p>$120</p>
+    <button onclick="addToCart('Valentino', 120, 'image/Cologne for Men _ Nordstrom.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Valentino&price=120&image=image/Valentino Uomo.jpg">View Detail</a>
+  </div>
+  <div class="product-man" data-name="Gucci Guilty" data-price="125" data-img="image/The best Gucci.jpg">
+    <img src="image/The best Gucci.jpg" alt="Gucci Guilty">
+    <h3>Gucci Guilty</h3>
+    <p>$125</p>
+    <button onclick="addToCart('Gucci Guilty', 125, 'image/The best Gucci.jpg')">Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Gucci Guilty&price=125&image=image/Gucci Guilty.jpg">View Detail</a>
+  </div>
+  <div class="product-man" data-name="Afnan 9am" data-price="130" data-img="image/Afnan 9am.jpg">
+    <img src="image/Afnan 9am.jpg" alt="Afnan 9am">
+    <h3>Afnan 9am </h3>
+    <p>$130</p>
+    <button onclick="addToCart('Afnan 9am', 130, 'image/Afnan 9am.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Afnan 9am&price=130&image=image/Afnan 9am man.jpg">View Detail</a>
+  </div>
+  <div class="product-man" data-name="YSL Y " data-price="140" data-img="image/Top.jpg">
+    <img src="image/Top.jpg" alt="YSL Y ">
+    <h3>YSL Y </h3>
+    <p>$140</p>
+    <button onclick="addToCart('YSL Y ', 140, 'image/Top.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=YSL Y &price=140&image=image/YSL Y.jpg">View Detail</a>
+  </div>
+
+  <!-- For Woman -->
+  <div class="product-woman" data-name="Delina Exclusif" data-price="115" data-img="image/ELLE Editors Can’t Stop Talking About These Floral Perfumes.jpg">
+    <img src="image/ELLE Editors Can’t Stop Talking About These Floral Perfumes.jpg" alt="Delina Exclusif">
+    <h3>Delina Exclusif</h3>
+    <p>$115</p>
+    <button onclick="addToCart('Delina Exclusif', 115, 'image/ELLE Editors Can’t Stop Talking About These Floral Perfumes.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Delina Exclusif&price=115&image=image/Delina Exclusif Parfums de Marly.jpg">View Detail</a>
+  </div>
+  <div class="product-woman" data-name="Burberry Her" data-price="110" data-img="image/buberry her.jpg">
+    <img src="image/buberry her.jpg" alt="Burberry Her">
+    <h3>Burberry Her</h3>
+    <p>$110</p>
+    <button onclick="addToCart('Burberry Her', 110, 'image/Gucci.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Burberry Her&price=110&image=image/buberry her.jpg">View Detail</a>
+  </div>
+  <div class="product-woman" data-name="Gucci Flora " data-price="135" data-img="image/Gucci.jpg">
+    <img src="image/Gucci.jpg" alt="Woman Perfume 3">
+    <h3>Gucci Flora </h3>
+    <p>$135</p>
+    <button onclick="addToCart('Gucci Flora ', 135, 'image/Gucci Flora.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=Gucci Flora &price=135&image=image/Flora Gorgeous Magnolia Gucci.jpg">View Detail</a>
+  </div>
+  <div class="product-woman" data-name="YSL Libre" data-price="140" data-img="image/YSL women.jpg">
+    <img src="image/YSL women.jpg" alt="YSL Libre">
+    <h3>YSL Libre</h3>
+    <p>$140</p>
+    <button onclick="addToCart('YSL Libre', 140, 'image/YSL women.jpg')">
+       <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    <a class="btn-outline" href="product-detail.html?title=YSL Libre&price=140&image=image/YSL Libre perfume.jpg">View Detail</a>
+  </div>
+</div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LDR-SHOP - Product Detail</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">LDR-SHOP</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="products.html">Products</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="cart.html" class="cart-link">
+      <i class="fas fa-shopping-cart"></i>
+      <span id="cart-count" class="cart-badge">0</span>
+</a>
+
+    </nav>
+  </header>
+
+  <!-- Product Detail Section -->
+  <section class="product-detail">
+    <div class="product-image">
+      <img src="images/perfume1.jpg" alt="" id="product-img" />
+    </div>
+    <div class="product-info">
+      <h1 id="product-title"></h1>
+      <p id="product-desc">
+        A luxurious oriental fragrance infused with deep woody and floral notes.
+        Crafted with premium ingredients to provide a lasting impression.
+      </p>
+      <p class="product-price">$<span id="product-price">150</span></p>
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" value="1" min="1" />
+      <br />
+      <button onclick="addDetailToCart()">
+      <i class="fas fa-cart-plus"></i> Add to Cart</button>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
